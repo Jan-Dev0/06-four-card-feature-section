@@ -111,7 +111,7 @@ body {
 .cards__card {
   background: white;
   box-shadow: 5px 5px 5px hsl(215, 39%, 90%);
-  padding-left: 2.8rem;
+  padding: 2.8rem;
   border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
@@ -192,8 +192,9 @@ body {
   }
 
   .cards__card {
-    width: 35rem;
+    max-width: 35rem;
     height: 25rem;
     padding: 3.2rem;
+    flex: 1;
   }
 }
