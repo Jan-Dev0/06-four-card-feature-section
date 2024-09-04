@@ -73,6 +73,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 7.4rem;
+  flex: 1;
 }
 
 .cards__header {
@@ -135,7 +136,6 @@ body {
 
 .cards__card--supervisor {
   border-top: 2px solid var(--color-cyan);
-  flex: 1;
 }
 
 .cards__card--team-builder {
@@ -195,6 +195,5 @@ body {
     max-width: 35rem;
     height: 25rem;
     padding: 3.2rem;
-    flex: 1;
   }
 }
