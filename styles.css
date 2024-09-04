@@ -1,38 +1,48 @@
-/* General reset */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  * {
-    margin: 0;
-  }
-  body {
-    line-height: 1.5;
-  }
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  input, button, textarea, select {
-    font: inherit;
-  }
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
+/* General reset for consistent styling across browsers */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
 
-  /* CSS variables for theme colors */
-
-  /* Primary */
+/* CSS variables for theme colors */
 :root {
---color-red: hsl(0, 78%, 62%);
---color-cyan: hsl(180, 62%, 55%);
---color-orange: hsl(34, 97%, 64%);
---color-blue: hsl(212, 86%, 64%);
-
-/* Neutral */
-
---color-text-primary: hsl(234, 12%, 34%);
---color-text-secondary: hsl(229, 6%, 66%);
---color-background: hsl(0, 0%, 98%);
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+  --color-text-primary: hsl(234, 12%, 34%);
+  --color-text-secondary: hsl(229, 6%, 66%);
+  --color-background: hsl(0, 0%, 98%);
 }
 
 /* Global styles */
@@ -42,20 +52,19 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;  
+  font-size: 1.5rem;
   color: var(--color-text-secondary);
   font-weight: 400;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .container {
-width: 37.5rem;
-background-color: var(--color-background);
-min-height: 100vh;
+  width: 37.5rem;
+  background-color: var(--color-background);
+  min-height: 100vh;
 }
 
 .cards {
@@ -63,16 +72,14 @@ min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.4rem;
+  gap: 7.4rem;
 }
 
 .cards__header {
-  margin-bottom: 7.6rem;
   display: flex;
   flex-direction: column;
   gap: 1.3rem;
 }
-
 
 .cards__heading {
   font-size: 2.4rem;
@@ -85,13 +92,13 @@ min-height: 100vh;
 .cards__subheading {
   font-size: 2.4rem;
   font-weight: 600;
-  color:var(--color-text-primary);
+  color: var(--color-text-primary);
   text-align: center;
   padding: 0 0.8rem;
 }
 
 .cards__text {
-text-align: center;
+  text-align: center;
 }
 
 .cards__content {
@@ -100,21 +107,22 @@ text-align: center;
   gap: 2.5rem;
 }
 
+/* Styles for individual cards */
 .cards__card {
   background: white;
+  box-shadow: 5px 5px 5px hsl(215, 39%, 90%);
   padding-left: 2.8rem;
   border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
-  gap: 3.3rem
+  gap: 3.3rem;
 }
 
 .cards__card-heading {
   font-size: 2rem;
   font-weight: 600;
   color: var(--color-text-primary);
-  padding-top: 2.7rem;
-
+  margin-bottom: 0.6rem;
 }
 
 .cards__card-description {
@@ -123,16 +131,69 @@ text-align: center;
 
 .cards__icon-wrapper {
   align-self: flex-end;
-  padding-right: 2.8rem;
-  padding-bottom: 2.8rem;
-
 }
 
-/*
+.cards__card--supervisor {
+  border-top: 2px solid var(--color-cyan);
+  flex: 1;
+}
+
+.cards__card--team-builder {
+  border-top: 2px solid var(--color-red);
+  flex: 1;
+}
+
+.cards__card--karma {
+  border-top: 2px solid var(--color-orange);
+  flex: 1;
+}
+
+.cards__card--calculator {
+  border-top: 2px solid var(--color-blue);
+  flex: 1;
+}
+
+/* Responsive styles for desktop view */
 @media (min-width: 42.5rem) {
   .container {
-    width: 90rem;
-    border: 1px solid grey;
+    width: 144rem;
+  }
+
+  .cards {
+    margin: 8rem 16.5rem 8rem 16.5rem;
+    gap: 6.4rem;
+  }
+
+  .cards__header {
+    margin: 0 28.5rem 0 28.5rem;
+    gap: 1.6rem;
+  }
+
+  .cards__heading {
+    font-size: 3.6rem;
+  }
+
+  .cards__subheading {
+    font-size: 3.6rem;
+  }
+
+  .cards__content {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  /* Wrapper for Team Builder and Karma cards */
+  .cards__column-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex: 1;
+  }
+
+  .cards__card {
+    width: 35rem;
+    height: 25rem;
+    padding: 3.2rem;
   }
 }
-*/
