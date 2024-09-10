@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://jan-dev0.github.io/four-card-feature-section)
+- [Solution URL](https://jan-dev0.github.io/06-four-card-feature-section/)
 
 ## My process
 
